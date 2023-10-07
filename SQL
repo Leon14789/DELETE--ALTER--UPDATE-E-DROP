@@ -1,0 +1,86 @@
+CREATE TABLE Animais ( 
+  id int,
+  nome VARCHAR(50),
+  nasc date,
+  peso decimal(10,2),
+  cor VARCHAR(50)
+  );
+  
+  // Inserindo dados
+  
+   INSERT INTO Animais values (01, 'Agata', '2015-04-09', 13.9, 'Branca');
+   
+    INSERT INTO Animais values (02, 'Feliz', '2016-06-06', 14.3, 'Preto');
+ 
+  INSERT INTO Animais values (03, 'Tom', '2013-08-02', 11.2, 'Azul');
+  
+   INSERT INTO Animais values (04, 'Garfiled', '2015-07-06', 17.7, 'Laranja');
+   
+    INSERT INTO Animais values (05, 'Frajola', '2013-08-01', 13.7, 'Preto');
+    
+     INSERT INTO Animais values (06, 'Manda-Chuva', '2012-02-03', 12.3, 'Amarelo');
+     
+      INSERT INTO Animais values (07, 'Snowball', '2014-04-06', 13.2, 'Preto');
+      
+       INSERT INTO Animais values (08, 'Gato de Botas', '2012-12-10', 11.6, 'Vermelho');
+       
+        INSERT INTO Animais values (09, 'Pluto', '2012-01-06', 12.9, 'Marrom');
+        
+         INSERT INTO Animais values (10, 'Pateta', '2019-11-09', 19.7, 'Laranja');
+         
+         
+         
+         
+         // Mudando o nome do Goofy
+         UPDATE Animais
+SET nome = 'Goofy'
+WHERE nome = 'Pateta';
+
+// Mudando o peso
+UPDATE Animais
+SET peso = 10.0
+WHERE nome = 'Garfield';
+
+// Criacao de um campo altura
+ALTER TABLE Animais
+ADD altura decimal(10,2);
+
+// Criacao do campo obs
+ALTER TABLE Animais
+ADD observacao VARCHAR(200);
+
+
+// Deletando animais pelo filtro 
+DELETE FROM Animais
+WHERE peso > 200;
+
+
+//  Removendo animais que comecam com C
+DELETE FROM Animais
+WHERE nome LIKE 'C%';
+
+// Removendo o campo Cor 
+ALTER TABLE Animais
+DROP COLUMN cor;
+
+// Almentando o tamannho do campo
+ALTER TABLE Animais
+MODIFY COLUMN nome VARCHAR(80);
+
+// Deletando Nasc
+ALTER TABLE Animais
+DROP COLUMN nasc;
+
+// apagando registros 
+DELETE FROM Animais;
+
+// Drop na tabela especieis 
+DROP TABLE especies;
+
+
+
+
+
+
+
+
